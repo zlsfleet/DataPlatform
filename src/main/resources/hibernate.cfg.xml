@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="connection.url">jdbc:mysql://localhost:3306/data</property>
+        <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.password">rooney10</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+        <mapping class="beans.DevicesEntity"/>
+        <mapping class="beans.ExpressEntity"/>
+        <mapping class="beans.O2OEntity"/>
+        <mapping class="beans.SpotsEntity"/>
+        <mapping class="beans.UsersEntity"/>
+        <mapping class="beans.WorkOrderEntity"/>
+        <mapping class="beans.WechatEntity"/>
+        <mapping class="beans.ServiceEntity"/>
+    </session-factory>
+</hibernate-configuration>

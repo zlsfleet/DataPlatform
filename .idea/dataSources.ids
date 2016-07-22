@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="MySQL - data@localhost" uuid="5a1ea6e6-f785-40ab-b946-0dacac5c4b88">
+    <database-info product="MySQL" version="5.7.13-log" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower"/>
+    <database-model serializer="dbm" rdbms="MYSQL" format-version="2.6">
+      <schema id="1" name="data">
+        <visible>1</visible>
+      </schema>
+      <schema id="2" name="information_schema"/>
+      <schema id="3" name="mysql"/>
+      <schema id="4" name="performance_schema"/>
+      <schema id="5" name="sys"/>
+      <table id="6" parent="1" name="devices">
+        <comment>设备数量</comment>
+      </table>
+      <table id="7" parent="1" name="express">
+        <comment>快递数据</comment>
+      </table>
+      <table id="8" parent="1" name="o2o">
+        <comment>O2O数据</comment>
+      </table>
+      <table id="9" parent="1" name="service"/>
+      <table id="10" parent="1" name="spots">
+        <comment>场地点位数量</comment>
+      </table>
+      <table id="11" parent="1" name="users"/>
+      <table id="12" parent="1" name="wechat"/>
+      <table id="13" parent="1" name="work_order">
+        <comment>工单数据</comment>
+      </table>
+      <column id="14" parent="6" name="date">
+        <mandatory>1</mandatory>
+        <data-type>date|0</data-type>
+      </column>
+      <column id="15" parent="6" name="working">
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="16" parent="6" name="testing">
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="17" parent="6" name="repairing">
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="18" parent="6" name="installed">
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="19" parent="6" name="total_devices">
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+      </column>
+      <key id="20" parent="6" name="PRIMARY">
+        <columns>date</columns>
+        <primary>1</primary>
+      </key>
+      <column id="21" parent="7" name="date">
+        <mandatory>1</mandatory>
+        <data-type>date|0</data-type>
+      </column>
+      <column id="22" parent="7" name="recipients">
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="23" parent="7" name="recipients_plus">
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="24" parent="7" name="packages">
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="25" parent="7" name="packages_plus">
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="26" parent="7" name="returns">
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="27" parent="7" name="couriers">
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="28" parent="7" name="couriers_plus">
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+      </column>
+      <key id="29" parent="7" name="PRIMARY">
+        <columns>date</columns>
+        <primary>1</primary>
+      </key>
+      <column id="30" parent="8" name="date">
+        <mandatory>1</mandatory>
+        <data-type>date|0</data-type>
+      </column>
+      <column id="31" parent="8" name="app_users">
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="32" parent="8" name="app_users_plus">
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="33" parent="8" name="ordered_users">
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="34" parent="8" name="ordered_users_plus">
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="35" parent="8" name="app_orders">
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="36" parent="8" name="app_orders_plus">
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="37" parent="8" name="home_visits">
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+      </column>
+      <key id="38" parent="8" name="PRIMARY">
+        <columns>date</columns>
+        <primary>1</primary>
+      </key>
+      <column id="39" parent="9" name="date">
+        <mandatory>1</mandatory>
+        <data-type>date|0</data-type>
+      </column>
+      <column id="40" parent="9" name="call_out">
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="41" parent="9" name="call_in">
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="42" parent="9" name="blacklist">
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="43" parent="9" name="to_verify">
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+      </column>
+      <key id="44" parent="9" name="PRIMARY">
+        <columns>date</columns>
+        <primary>1</primary>
+      </key>
+      <column id="45" parent="10" name="date">
+        <mandatory>1</mandatory>
+        <data-type>date|0</data-type>
+      </column>
+      <column id="46" parent="10" name="signed">
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="47" parent="10" name="surveyed">
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="48" parent="10" name="worked">
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="49" parent="10" name="installed">
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="50" parent="10" name="to_remove">
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="51" parent="10" name="total_spots">
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+      </column>
+      <key id="52" parent="10" name="PRIMARY">
+        <columns>date</columns>
+        <primary>1</primary>
+      </key>
+      <column id="53" parent="11" name="idusers">
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="54" parent="11" name="username">
+        <mandatory>1</mandatory>
+        <data-type>varchar(45)|0</data-type>
+      </column>
+      <column id="55" parent="11" name="password">
+        <mandatory>1</mandatory>
+        <data-type>varchar(45)|0</data-type>
+      </column>
+      <key id="56" parent="11" name="PRIMARY">
+        <columns>idusers</columns>
+        <primary>1</primary>
+      </key>
+      <column id="57" parent="12" name="date">
+        <mandatory>1</mandatory>
+        <data-type>date|0</data-type>
+      </column>
+      <column id="58" parent="12" name="wx_users">
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="59" parent="12" name="wx_users_plus">
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="60" parent="12" name="wx_users_minus">
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="61" parent="12" name="wx_orders">
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="62" parent="12" name="wx_orders_plus">
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+      </column>
+      <key id="63" parent="12" name="PRIMARY">
+        <columns>date</columns>
+        <primary>1</primary>
+      </key>
+      <column id="64" parent="13" name="date">
+        <mandatory>1</mandatory>
+        <data-type>date|0</data-type>
+      </column>
+      <column id="65" parent="13" name="remaining_orders">
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="66" parent="13" name="new_orders">
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="67" parent="13" name="finished_orders">
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+      </column>
+      <key id="68" parent="13" name="PRIMARY">
+        <columns>date</columns>
+        <primary>1</primary>
+      </key>
+    </database-model>
+  </data-source>
+</component>
