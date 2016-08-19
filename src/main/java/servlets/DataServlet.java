@@ -22,11 +22,12 @@ import java.util.List;
 public class DataServlet extends HttpServlet {
     public DataServlet() {
 
-
     }
 
     public void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+
+        DataImport.importData();
 
         Configuration conf = new Configuration();
         conf = conf.configure();

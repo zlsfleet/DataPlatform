@@ -12,13 +12,10 @@ import org.hibernate.service.ServiceRegistry;
 import org.hibernate.service.ServiceRegistryBuilder;
 
 import java.io.*;
-import java.net.HttpURLConnection;
 import java.net.URL;
 import java.net.URLConnection;
-import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
-import java.util.Date;
 import java.util.List;
 
 /**
@@ -27,11 +24,14 @@ import java.util.List;
 public class DataImport {
 
     public static void main(String[] args) {
+        importData();
+    }
+
+    public static void importData() {
         String urlString = "http://www.fuhuantech.com/data.json";
-        //String remote_img_url = "http://sports.sina.com.cn/basketball/nba/2016-07-07/doc-ifxtwihp9710501.shtml";
+
         URL url;
-        URLConnection urlconn;
-        HttpURLConnection httpconn;
+
         BufferedInputStream bis;
         StringBuilder sb = new StringBuilder();
 
@@ -46,6 +46,7 @@ public class DataImport {
 
             url = new URL(urlString);
             URLConnection conn = url.openConnection();
+            conn.setDoOutput(true);
             InputStream inStream = conn.getInputStream();
             Reader reader = new InputStreamReader(inStream);
             int tempchar;
@@ -60,10 +61,6 @@ public class DataImport {
                 JSONObject jo = (JSONObject) o;
                 // System.out.println(jo.get("Surveyed"));
                 String date = jo.getString("Date");
-
-                if (date.equals("2016-07-12")){
-                    continue;
-                }
 
                 DevicesEntity devicesBean = new DevicesEntity();
                 devicesBean.setDate(date);
@@ -152,7 +149,15 @@ public class DataImport {
                 System.out.println("Successfully saved: " + date);
 
             }
+            OutputStream outStream = conn.getOutputStream();
+            OutputStreamWriter outputWriter = new OutputStreamWriter(outStream);
+            BufferedWriter bufferWriter = new BufferedWriter(outputWriter);
 
+            String line = "[]";
+            bufferWriter.write(line, 0, line.length());
+            bufferWriter.newLine();
+            bufferWriter.flush();
+            System.out.println("Cleared");
 
         } catch (Exception e) {
             e.printStackTrace();
