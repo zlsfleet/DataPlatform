@@ -134,7 +134,7 @@
                         {
                             type: 'slider',
                             xAxisIndex: 0,
-                            start: result.length - 31,
+                            start: 0,
                             end: 100
                         },
                         {
